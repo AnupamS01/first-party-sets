@@ -33,6 +33,7 @@ jobs:
       - name: Content check
         id: check
         run: python3 main/check_sites.py -i pull-request/first_party_sets.JSON --data_directory=main --with_diff > results.txt
+             cat results.txt
       - name: Read the result
         id: read_results
         uses: andstor/file-reader-action@v1
